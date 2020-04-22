@@ -13,6 +13,9 @@ BAR_DATA_FILE_PATH = 'data/weatherstndata_filtered.xlsx'
 BAR_DATA_SKIPROWS = [1]
 BAR_DATA_DATE_COLUMN_NAME = 'DateTime'
 BAR_DATA_DATA_COLUMN_NAME = 'PG_1hr'
+PLOT_TITLE = 'Monthly Rainfall Averages with Daily Rainfall Bars for 2019'
+PLOT_XLABEL =
+PLOT_YLABEL =
 OUTPUT_FILE_PATH = 'data/weatherstndata_chart.png'
 
 # Read in the hourly bars
@@ -41,7 +44,7 @@ datemax = pd.to_datetime(bar_data[BAR_DATA_DATE_COLUMN_NAME].iloc[-1], format='%
 ax.set_xlim(datemin, datemax)
 
 plt.bar(bar_data['DateTime'], bar_data['PG_1hr'])
-plt.title('Monthly Rainfall Averages with Daily Rainfall Bars for 2019')
+plt.title()
 plt.xlabel('Month')
 plt.ylabel('Precipitation (mm)')
 plt.grid(True)
